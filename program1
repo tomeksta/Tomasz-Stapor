@@ -1,0 +1,23 @@
+# Program wielokrotnie rozgałęziony
+
+print "Ten program przewidzi Twoją długość życia"
+
+odp = raw_input("Czy palisz papierosy?")
+
+if odp == "Tak" or odp == "TAK" or odp == "tak" or odp == "no pewnie":
+
+    odp = raw_input ("A czy się zaciągasz?")
+
+    if odp == "Tak" or odp == "TAK" or odp == "tak" or odp == "no pewnie":
+
+        print "Nie pożyjesz długo!"
+
+    else:
+
+        print "To pożyjesz długo!"
+
+else:
+
+    print "To pożyjesz bardzo długo!"
+
+ 
