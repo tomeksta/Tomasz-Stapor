@@ -1,0 +1,25 @@
+t=raw_input("Podaj pełną nazwę pliku >")
+
+p=input("Podaj przesunięcie >”)
+
+f1 = open(t,"r+b")      # plik otwarty do modyfikacji
+
+s=f1.read()             # wczytujemy do s tekst źródłowy
+
+sz=""                   # sz oznacza tekst zaszyfrowany
+
+for c in s:             # dla każdego znaku w s
+
+    a=ord(c)            # wyliczamy kod ASCII
+
+    if a > 32:          # znaków białych i sterujących nie szyfrujemy
+
+        c=chr((a+p) % 256)   # inne przesuwamy
+
+    sz+=c               # dodajemy do sz
+
+f1.seek(0)               # ustawiamy pozycję pliku na jego początku
+
+f1.write(sz)            # zapisujmy sz
+
+f1.close()              # zamykamy plik
